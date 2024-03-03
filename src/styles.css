@@ -1,0 +1,220 @@
+/* ---- css resets ---- */
+*,
+*::after,
+*::before {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+:root {
+	--color-white: #fcfaf9;
+	--color-accent: #fa7453;
+	--color-black: #191826;
+}
+
+/* commons */
+body {
+	font-family: "IBM Plex Sans", sans-serif;
+	background-image: url(/public/assets/images/hero-bg-mobile.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: top -85px right -65px;
+}
+
+.container {
+	padding: 0px 30px;
+	max-width: 860px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+header {
+	padding-top: 30px;
+	margin-bottom: 50px;
+}
+
+/* typography */
+h1 {
+	line-height: 1.3em;
+	font-size: 2rem;
+	margin-bottom: 20px;
+}
+
+h2 {
+	line-height: 1.3em;
+	font-size: 1.8rem;
+	margin-bottom: 15px;
+}
+
+p {
+	line-height: 1.5em;
+}
+
+/* HERO section */
+
+#hero {
+	padding-bottom: 70px;
+	display: flex;
+	gap: 35px;
+}
+
+.hero-pattern {
+	display: none;
+	height: 340px;
+	position: relative;
+	top: -40px;
+	right: 0px;
+}
+
+@media screen and (min-width: 550px) {
+	body {
+		background-image: url(/public/assets/images/hero-bg-tablet.png);
+	}
+	#hero {
+		padding-right: 0;
+	}
+	.hero-pattern {
+		display: block;
+	}
+}
+
+@media screen and (min-width: 640px) {
+	body {
+		background-image: url(/public/assets/images/hero-bg-desktop.png);
+		background-position: top -100px left -100px;
+	}
+}
+
+/* MAIN CONTENT section */
+
+#main-content {
+	--overflow-margin: 100px;
+	height: auto;
+	position: relative;
+	margin-top: var(--overflow-margin);
+}
+#main-content .preview-background {
+	background-color: rgb(0, 0, 35);
+	height: 550px;
+	background-repeat: no-repeat;
+	background-position: top center;
+	border-radius: 15px;
+	background-image: url(/public/assets/bg-pattern-2.svg);
+}
+
+.app-illustration {
+	position: absolute;
+	top: calc(var(--overflow-margin) * -1);
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+.app-illustration img {
+	width: 70%;
+	max-width: 250px;
+}
+
+.pricing-card {
+	border-radius: 15px;
+	background-color: var(--color-accent);
+	color: var(--color-white);
+	padding: 40px 30px;
+
+	position: relative;
+	bottom: 100px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media screen and (min-width: 550px) {
+	#main-content {
+		margin-bottom: calc(var(--overflow-margin) + 50px);
+		margin-left: auto;
+		margin-right: auto;
+		padding: 0px 30px;
+		max-width: 860px;
+	}
+	.app-illustration {
+		left: 70px;
+		justify-content: flex-start;
+		max-width: 350px;
+	}
+	.pricing-card {
+		max-width: 350px;
+		bottom: calc(var(--overflow-margin) * -1);
+		position: absolute;
+		right: 70px;
+	}
+}
+
+.price-container {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+.price-amount {
+	font-size: 2rem;
+	font-weight: 600;
+}
+
+.download-container {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.download-button {
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 15px 25px;
+	justify-content: center;
+}
+.download-button img {
+	height: 20px;
+}
+.button-variant-black {
+	background-color: var(--color-black);
+	color: var(--color-white);
+}
+.button-variant-white {
+	background-color: var(--color-white);
+	color: var(--color-black);
+}
+
+/* footer */
+
+footer {
+	/* margin-top: 150px; */
+	margin-bottom: 50px;
+}
+
+.logo {
+	margin-bottom: 30px;
+}
+
+a {
+	color: black;
+	font-weight: bold;
+	text-decoration: none;
+}
+.socials-container {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+}
+footer > div {
+	display: flex;
+	flex-direction: column;
+	gap: 35px;
+}
+@media screen and (min-width: 750px) {
+	footer > div {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
