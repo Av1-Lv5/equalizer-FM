@@ -7,3 +7,5 @@ A beautiful landing page for a system audio equalizer for Android and iOS, built
 The designs are from a [challenge by frontendmentor.io](https://www.frontendmentor.io/challenges/equalizer-landing-page-7VJ4gp3DE)
 
 > Frontendmentor is a platform offering, some free and paywalled professional designs for frontend developers to create stunning projects.
+
+View my list of all solved Frontementor challenges [here](https://github.com/Av1-Lv5/Frontendmentor-challenges)
